@@ -1,15 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
-func binarySerach(arr []int64, targetVal int64) bool {
+func binarySerach(arr []int, targetVal int) bool {
 	found := false
 	low := 0
 	high := len(arr) - 1
 
 	for low <= high {
 		mid := (low + high) / 2
-		//fmt.Println(mid)
 		if arr[mid] == targetVal {
 			found = true
 			break
@@ -24,6 +26,7 @@ func binarySerach(arr []int64, targetVal int64) bool {
 	return found
 }
 func main() {
-	var arr = []int64{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	fmt.Println(binarySerach(arr, 3))
+	var arr = []int{1, 8, 2, 3, 4, 5, 6, 7, 9}
+	sort.Ints(arr)
+	fmt.Println(binarySerach(arr, 8))
 }
