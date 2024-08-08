@@ -16,9 +16,10 @@ func isPrime(num int) bool {
 }
 
 func main() {
-	var container = []int{}   // Initialize an empty slice to store prime numbers
-	i := 0                    // Start checking numbers from 0
-	for len(container) <= 6 { // Continue until we have 6 prime numbers
+	var numLen = 5
+	var container = []int{}        // Initialize an empty slice to store prime numbers
+	i := 0                         // Start checking numbers from 0
+	for len(container) <= numLen { // Continue until we have 6 prime numbers
 		if isPrime(i) { // If the current number is prime
 			container = append(container, i) // Add it to the container
 		}
