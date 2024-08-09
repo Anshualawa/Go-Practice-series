@@ -39,10 +39,24 @@ func (c Circle) Perimeter() float64 {
 	return 2 * math.Pi * c.Radius
 }
 
+// Triangle	Area = 1 2 bh	b = base h = height
+
+type Triangle struct {
+	Base   int
+	Height int
+}
+
+func (t Triangle) Area() int {
+	return 12 * t.Base * t.Height
+}
+
+
+
 func main() {
 	rectangle := Rectangle{Width: 10, Height: 5}
 	circle := Circle{Radius: 7}
-
+	triangle := Triangle{Base: 4, Height: 5}
 	fmt.Println("Area of Rectangle:", rectangle.Area())
 	fmt.Println("Area of Circle:", circle.Area())
+	fmt.Println("Area of Triangle:", triangle.Area())
 }
