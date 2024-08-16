@@ -21,7 +21,7 @@ func fibonacci_tabulation(n int) int {
 }
 
 func main() {
-	var n int = 100
+	var n int = 10
 	/*result := fibonacci_tabulation(n)
 	fmt.Printf("The %vth Fibonacci number is %v\n", n, result)
 	*/
